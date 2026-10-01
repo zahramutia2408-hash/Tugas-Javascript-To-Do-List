@@ -1,27 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do list </title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <div class="toDo">
-            <h1>My To Do List <img src="images/icon.png"></h1>
-            <div class="row">
-                <input type="text" id="inputTask" placeholder="Tambahkan to do list">
-                <button id="tombol">tambah</button>
-            </div>
-            <ul id="listContainer">
-            </ul>
+      <div class="toDo">
+        <div class="header">
+          <div>
+            <p class="small-title">MY DAILY PLAN</p>
+            <h1>To Do List</h1>
+          </div>
+          <div class="header-icon">✓</div>
         </div>
+
+        <div class="row">
+          <input
+            type="text"
+            id="inputTask"
+            placeholder="Tambahkan kegiatan..."
+            autocomplete="off"
+          />
+          <button id="tombol">Tambah</button>
+        </div>
+
+        <ul id="listContainer"></ul>
+        <div id="emptyState">
+          <div class="empty-icon">✓</div>
+          <h3>Belum ada kegiatan</h3>
+          <p>Tambahkan kegiatan yang ingin kamu selesaikan hari ini.</p>
+        </div>
+
+        <div class="task-info">
+          <div>
+            <span id="totalTask">0</span>
+            <small>Total Tugas</small>
+          </div>
+
+          <div>
+            <span id="completedTask">0</span>
+            <small>Selesai</small>
+          </div>
+
+          <div>
+            <span id="pendingTask">0</span>
+            <small>Belum Selesai</small>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer">Plan your day · One task at a time</p>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
